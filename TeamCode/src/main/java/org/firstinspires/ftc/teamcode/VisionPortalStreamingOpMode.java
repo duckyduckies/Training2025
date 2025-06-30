@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import org.firstinspires.ftc.robotcore.external.function.Consumer;
 import org.firstinspires.ftc.robotcore.external.function.Continuation;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
+import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.robotcore.external.stream.CameraStreamSource;
 import org.firstinspires.ftc.robotcore.internal.camera.calibration.CameraCalibration;
 import org.firstinspires.ftc.vision.VisionPortal;
@@ -61,11 +62,21 @@ public class VisionPortalStreamingOpMode extends LinearOpMode {
         final CameraStreamProcessor processor = new CameraStreamProcessor();
 
         new VisionPortal.Builder()
+                .setCamera(hardwareMap.get(WebcamName.class, "Webcam 1"))
                 .addProcessor(processor)
                 .setCamera(BuiltinCameraDirection.BACK)
                 .build();
 
+        final CameraStreamProcessor processor2 = new CameraStreamProcessor();
+
+        new VisionPortal.Builder()
+                .setCamera(hardwareMap.get(WebcamName.class, "Webcam 2"))
+                .addProcessor(processor2)
+                .setCamera(BuiltinCameraDirection.BACK)
+                .build();
+
         FtcDashboard.getInstance().startCameraStream(processor, 0);
+        FtcDashboard.getInstance().startCameraStream(processor2, 0);
 
         waitForStart();
 
