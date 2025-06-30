@@ -27,7 +27,7 @@ If you are an Android Studio programmer, there are several ways to download this
 * Or, if you prefer, you can use the "Download Zip" button available through the main repository page.  Downloading the project as a .ZIP file will keep the size of the download manageable.
 
 * You can also download the project folder (as a .zip or .tar.gz archive file) from the Downloads subsection of the [Releases](https://github.com/FIRST-Tech-Challenge/FtcRobotController/releases) page for this repository.
-
+[teamcode](TeamCode%2Fsrc%2Fmain%2Fjava%2Forg%2Ffirstinspires%2Fftc%2Fteamcode)
 * The Releases page also contains prebuilt APKs.
 
 Once you have downloaded and uncompressed (if needed) your folder, you can use Android Studio to import the folder  ("Import project (Eclipse ADT, Gradle, etc.)").
